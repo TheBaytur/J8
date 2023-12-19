@@ -11,5 +11,10 @@ public class Main { //Collections
         for (String string : list){
             System.out.println(string);
         }
+
+        list.remove("first");
+        for (int i = 0; i < list.size(); i++){
+            System.out.println("i " + i + " item " + list.get((i)));
+        }
     }
 }

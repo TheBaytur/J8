@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Main { //Collections
+public class Main { //Collections, list add...
     public static void main(String[] args) {
 
         List<String> list = new ArrayList<>();
@@ -15,12 +15,7 @@ public class Main { //Collections
         list.add("so");
 //        list.clear();
         list.add("new item");
-        list.sort(new Comparator<String>() {
-            @Override
-            public int compare(String s, String t1) {
-                return s.length() - t1.length();
-            }
-        });
+        list.sort((s, t1) -> s.length() - t1.length());
 
         for (String string : list){
             System.out.println(string);

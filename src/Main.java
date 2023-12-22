@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main { //Collections
@@ -12,8 +13,14 @@ public class Main { //Collections
         list.add("forth");
         list.add("fifth");
         list.add("so");
-        list.clear();
+//        list.clear();
         list.add("new item");
+        list.sort(new Comparator<String>() {
+            @Override
+            public int compare(String s, String t1) {
+                return s.length() - t1.length();
+            }
+        });
 
         for (String string : list){
             System.out.println(string);
